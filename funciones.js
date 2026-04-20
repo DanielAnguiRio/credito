@@ -7,3 +7,19 @@ function calcularDisponible(ingresos,egresos){
         return disponible;
     }
 }
+
+function calcularCapacidadPago(montoDisponible){
+    let capacidad;
+
+    capacidad = montoDisponible * 0.5;
+
+    return capacidad;
+}
+
+function calcularInteresSimple(monto, tasa, plazoAnios){
+    let interes;
+
+    interes = monto * (tasa / 100) * plazoAnios;
+
+    return interes;
+}

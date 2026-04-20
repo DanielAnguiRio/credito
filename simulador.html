@@ -10,41 +10,62 @@
 </head>
 <body>
 
+    <div class="fondo"></div>
+
     <div class="container">
-        <h1>Simulador de Crédito</h1>
 
-        <h2>Datos financieros</h2>
-        <label for="txtIngresos">Ingresos:</label>
-        <input type="text" id="txtIngresos">
+        <!-- HEADER -->
+        <div class="header">
+            <img src="https://cdn-icons-png.flaticon.com/512/2830/2830284.png" class="logo">
+            <h1>Simulador de Crédito</h1>
+            <p class="sub">Análisis financiero inteligente</p>
+        </div>
 
-        <label for="txtEgresos">Egresos:</label>
-        <input type="text" id="txtEgresos">
+        <!-- DATOS -->
+        <div class="card">
+            <h2>Datos financieros</h2>
 
-        <p>Disponible: <span id="spnDisponible"></span></p>
-        <p>Capacidad de pago mensual: <span id="spnCapacidadPago"></span></p>
+            <label>Ingresos</label>
+            <input type="text" id="txtIngresos">
 
-        <h2>Solicitud de crédito</h2>
-        <label for="txtMonto">Monto:</label>
-        <input type="text" id="txtMonto">
+            <label>Egresos</label>
+            <input type="text" id="txtEgresos">
 
-        <label for="txtPlazo">Plazo en años:</label>
-        <input type="text" id="txtPlazo">
+            <div class="resultado">
+                <p>Disponible <span id="spnDisponible"></span></p>
+                <p>Capacidad mensual <span id="spnCapacidadPago"></span></p>
+            </div>
+        </div>
 
-        <label for="txtTasaInteres">Tasa de interés:</label>
-        <input type="text" id="txtTasaInteres">
+        <!-- CRÉDITO -->
+        <div class="card">
+            <h2>Solicitud</h2>
 
-        <p>Interés a pagar: <span id="spnInteresPagar"></span></p>
-        <p>Total préstamo: <span id="spnTotalPrestamo"></span></p>
-        <p>Cuota mensual: <span id="spnCuotaMensual"></span></p>
-        <p>Estado de crédito: <span id="spnEstadoCredito">ANALIZANDO...</span></p>
+            <label>Monto</label>
+            <input type="text" id="txtMonto">
 
+            <label>Plazo (años)</label>
+            <input type="text" id="txtPlazo">
+
+            <label>Tasa (%)</label>
+            <input type="text" id="txtTasaInteres">
+
+            <div class="resultado">
+                <p>Interés <span id="spnInteresPagar"></span></p>
+                <p>Total <span id="spnTotalPrestamo"></span></p>
+                <p>Cuota <span id="spnCuotaMensual"></span></p>
+                <p class="estado">Estado <span id="spnEstadoCredito">ANALIZANDO...</span></p>
+            </div>
+        </div>
+
+        <!-- BOTONES -->
         <div class="buttons">
-            <button id="btnCalcularCredito" onclick="calcular();">Calcular Crédito</button>
+            <button id="btnCalcularCredito" onclick="calcular()">Calcular</button>
             <button id="btnReiniciar">Reiniciar</button>
         </div>
+
     </div>
 
     <script src="simulador.js"></script>
-
 </body>
 </html>
